@@ -1,4 +1,4 @@
-import { Dashboard, Login, PrivateRoute, AuthWrapper, Error} from './pages';
+import { Dashboard, Login, Error} from './pages';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { AuthRoute } from './components';
 

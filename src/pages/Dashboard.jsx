@@ -1,8 +1,11 @@
+import LoadingImage from '../assets/loading.gif';
 
 
 const Dashboard = () => {
   return (
-    <div>Dashboard</div>
+    <main>
+        <h2></h2>
+    </main>
   )
 }
 
