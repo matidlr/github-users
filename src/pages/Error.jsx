@@ -1,6 +1,6 @@
-import styled from "styled-components"
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 import Wrapper from "../assets/wrappers/Error";
+import styled from "styled-components";
 const Error = () => {
   return (
     <Wrapper>

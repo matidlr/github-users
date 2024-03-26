@@ -1,14 +1,9 @@
-import LoadingImage from '../assets/loading.gif';
-
+import React from 'react'
 
 const Dashboard = () => {
   return (
-    <main>
-        <Navbar></Navbar>
-        <SearchBar/>
-        
-    </main>
+    <div>Dashboard</div>
   )
-};
+}
 
-export default Dashboard;
+export default Dashboard

@@ -1,3 +1,5 @@
+import styled from "styled-components";
+
 const Wrapper = styled.div`
   .error-page {
     width: 100%;

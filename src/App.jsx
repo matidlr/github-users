@@ -1,8 +1,9 @@
-import { Login } from './pages/Login.jsx';
-import { Dashboard } from './pages/Dashboard';
-import { Error } from './pages/Error';
+
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { AuthRoute } from './components';
+import Dashboard from './pages/Dashboard.jsx';
+import Error from './pages/Error.jsx';
+import Login from './pages/Login.jsx';
+import AuthRoute from './components/AuthRoute.jsx'
 
 const App = () => {
   return (
