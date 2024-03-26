@@ -6,6 +6,6 @@ const Loading = () => {
       <img src={loadingGif} alt="loading" />
     </Wrapper>
   )
-}
-export default Loading
+};
+export default Loading;
 

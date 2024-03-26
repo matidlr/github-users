@@ -60,6 +60,6 @@ const Item = ({icon,label,value,color})=>{
         <p>{label}</p>
       </div>
   </article>
-}
+};
 
-export default UserInfo
+export default UserInfo;
