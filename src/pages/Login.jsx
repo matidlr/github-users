@@ -1,6 +1,7 @@
 import styled from "styled-components"
 import freelancingImg from "../assets/freelancing-clipart.svg"
 import { useAuth0 } from "@auth0/auth0-react"
+import Wrapper from "../assets/wrappers/Login";
 
 const Login = () => {
   const { loginWithRedirect } = useAuth0()
@@ -19,29 +20,6 @@ const Login = () => {
       </div>
     </Wrapper>
   )
-}
-export default Login
+};
 
-const Wrapper = styled.section`
-  .login-page {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .freelance-img {
-    max-width: 200px;
-  }
-
-  .title {
-    font-weight: 700;
-  }
-
-  .btn-login {
-    text-transform: uppercase;
-    background-color: var(--clr-dark-gray);
-  }
-`
+export default Login;
