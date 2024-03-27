@@ -1,6 +1,6 @@
 import React from 'react'
-import ReactFC from 'react-fusioncharts'
-import FusionCharts from 'fusioncharts'
+import ReactFC from 'react-fusioncharts';
+import FusionCharts from 'fusioncharts';
 import Chart from 'fusioncharts/fusioncharts.charts'
 import FusionTheme from 'fusioncharts/themes/fusioncharts.theme.fusion'
 
@@ -26,4 +26,4 @@ const ChartComponent = ({ data }) => {
 	return <ReactFC {...chartConfigs} />
 }
 
-export default ChartComponent
+export default ChartComponent;
