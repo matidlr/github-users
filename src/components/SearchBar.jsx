@@ -6,7 +6,7 @@ import ErrorWrapper from '../assets/wrappers/ErrorWrapper';
 
 const SearchBar = () => {
     const [user,setUser] = useState('');
-    const {requests, error, searchGithubUser } = useContext(GithubContext);
+    const {requests, error, searchGithubUser, isLoading } = useContext(GithubContext);
 
     const handleSubmit = (e) =>{
       e.preventDefault();
@@ -31,7 +31,7 @@ const SearchBar = () => {
                       value={user} 
                       onChange={()=> setUser(e.target.value)} 
                   />
-                  {requests > 0 &&  <button type='submit'>search</button>}
+                  {requests > 0 && !isLoading && <button type='submit'>search</button>}
                  
                </div>
             </form>
