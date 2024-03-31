@@ -22,26 +22,32 @@ ReactFC.fcRoot(FusionCharts, Column2D, FusionTheme);
 
 // STEP 3 - Creating the JSON object to store the chart configurations
 
-const ChartComponent = ({ data }) => {
+const ChartComponent = ({data})=>{
   const chartConfigs = {
-    type: "pie3d", // The chart type
-    width: "100%", // Width of the chart
+    type: "bar3d", // The chart type
+    width: "400", // Width of the chart
     height: "400", // Height of the chart
     dataFormat: "json", // Data type
     dataSource: {
       // Chart Configuration
       chart: {
         //Set the chart caption
-        caption: "Languages",
-        decimals: 0,
-        theme: "fusion",
-        pieRadius: '35%'
+        caption: "Countries With Most Oil Reserves [2017-18]",
+        //Set the chart subcaption
+        subCaption: "In MMbbl = One Million barrels",
+        //Set the x-axis name
+        xAxisName: "Country",
+        //Set the y-axis name
+        yAxisName: "Reserves (MMbbl)",
+        numberSuffix: "K",
+        //Set the theme for your chart
+        theme: "fusion"
       },
       // Chart Data
       data: data
     }
   };
-
+  
 
   return (<ReactFC {...chartConfigs} />);
 }

@@ -1,34 +1,29 @@
-import Card from '../components/Card';
-import Followers from '../components/Followers';
-import UserInfo from '../components/UserInfo';
-import Wrapper from '../assets/wrappers/Dashboard';
-import SearchBar from '../components/SearchBar';
-import Repos from '../components/Repos';
-import Navbar from '../components/Navbar';
-import { useContext } from 'react';
-import { GithubContext } from '../context';
-import loadingImage from '../assets/loading.gif'
-
+import React from 'react';
+import { Info, Repos, User, Search, Navbar } from '../components';
+import loadingImage from '../images/preloader.gif';
+import { GithubContext } from '../context/context';
 const Dashboard = () => {
-  const {isLoading} = useContext(GithubContext);
-  if(isLoading){
-    return <main>
-      <Navbar/>
-      <SearchBar/>
-      <img src={loadingImage} className='loading-img' alt='loading' />
-    </main>
-  }
-  return (
-    <main className='section'>
-      <Wrapper className='section-center'>
-          <Navbar/>
-          <SearchBar/>
-          <UserInfo/>
-          <Repos/>
-      </Wrapper>
-        
-    </main>
-  )
-}
+  const { isLoading } = React.useContext(GithubContext)
 
-export default Dashboard
+  if (isLoading) {
+    return (
+      <main>
+        <Navbar />
+        <Search />
+        <img src={loadingImage} className="loading-img" alt="loading"></img>
+      </main>
+    );
+  }
+
+  return (
+    <main>
+      <Navbar />
+      <Search />
+      <Info />
+      <User />
+      <Repos />
+    </main>
+  );
+};
+
+export default Dashboard;

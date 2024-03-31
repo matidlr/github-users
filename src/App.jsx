@@ -1,25 +1,19 @@
+import React from 'react';
+import { Dashboard, Login, PrivateRoute, AuthWrapper, Error } from './pages';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Dashboard from './pages/Dashboard.jsx';
-import Error from './pages/Error.jsx';
-import Login from './pages/Login.jsx';
-import PrivateRoute from './components/PrivateRoute.jsx';
-import AuthWrapper from './components/AuthWrapper.jsx';
-const App = () => {
+function App() {
   return (
     <AuthWrapper>
-    <BrowserRouter>
-     <Routes>
-        <Route path="/" 
-            element={<PrivateRoute>
-                <Dashboard />
-            </PrivateRoute>}/>
-         <Route path="/login" element={<Login />} />
-         <Route path="*" element={<Error />}/>
-     </Routes>
-    </BrowserRouter>
+      <Router>
+        <Routes>
+          <Route path='/' element={<PrivateRoute><Dashboard /></PrivateRoute>} />
+          <Route path='login' element={<Login />} />
+          <Route path='*' element={<Error />} />
+        </Routes>
+      </Router>
     </AuthWrapper>
-  )
+  );
 }
 
-export default App
+export default App;
