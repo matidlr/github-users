@@ -1,8 +1,7 @@
-import React from 'react'
 import ReactFC from 'react-fusioncharts';
 import FusionCharts from 'fusioncharts';
-import Chart from 'fusioncharts/fusioncharts.charts'
-import FusionTheme from 'fusioncharts/themes/fusioncharts.theme.fusion'
+import Chart from 'fusioncharts/fusioncharts.charts';
+import FusionTheme from 'fusioncharts/themes/fusioncharts.theme.fusion';
 
 ReactFC.fcRoot(FusionCharts, Chart, FusionTheme)
 

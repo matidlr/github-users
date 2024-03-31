@@ -4,10 +4,10 @@ import Dashboard from './pages/Dashboard.jsx';
 import Error from './pages/Error.jsx';
 import Login from './pages/Login.jsx';
 import PrivateRoute from './components/PrivateRoute.jsx';
-
+import AuthWrapper from './components/AuthWrapper.jsx';
 const App = () => {
   return (
-    
+    <AuthWrapper>
     <BrowserRouter>
      <Routes>
         <Route path="/" 
@@ -18,6 +18,7 @@ const App = () => {
          <Route path="*" element={<Error />}/>
      </Routes>
     </BrowserRouter>
+    </AuthWrapper>
   )
 }
 
