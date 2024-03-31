@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Dashboard from './pages/Dashboard.jsx';
 import Error from './pages/Error.jsx';
 import Login from './pages/Login.jsx';
-import AuthRoute from './components/AuthRoute.jsx'
+import PrivateRoute from './components/PrivateRoute.jsx';
 
 const App = () => {
   return (
@@ -11,9 +11,9 @@ const App = () => {
     <BrowserRouter>
      <Routes>
         <Route path="/" 
-            element={<AuthRoute>
+            element={<PrivateRoute>
                 <Dashboard />
-            </AuthRoute>}/>
+            </PrivateRoute>}/>
          <Route path="/login" element={<Login />} />
          <Route path="*" element={<Error />}/>
      </Routes>

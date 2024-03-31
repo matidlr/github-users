@@ -9,7 +9,7 @@ const Navbar = () => {
     user, 
     isLoading 
   } = useAuth0();
-  const isUser = isAuthenticated && User;
+  const isUser = isAuthenticated && user;
 
   return (
     <Wrapper>
